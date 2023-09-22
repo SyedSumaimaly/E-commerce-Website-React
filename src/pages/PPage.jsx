@@ -3,7 +3,7 @@ import CusNavbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Products from '../components/Products'
 
-function Home() {
+function PPage() {
   return (
 <>
 <CusNavbar/>
@@ -13,4 +13,4 @@ function Home() {
   )
 }
 
-export default Home
+export default PPage
