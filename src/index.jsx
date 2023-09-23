@@ -2,17 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
-import store from './redux/store';
-import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom'
+import ContextProvider from './context/addtocart/Context'
 
-ReactDOM.render(
-    <Provider store={store}>
-      <App />
-    </Provider>
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <ContextProvider>
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>
+  </ContextProvider>
+  ,
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

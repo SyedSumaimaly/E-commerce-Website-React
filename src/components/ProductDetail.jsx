@@ -5,9 +5,7 @@ import CusNavbar from './Navbar';
 import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import Footer from './Footer';
-import { UseSelector } from 'react-redux/es/hooks/useSelector';
-import { useDispatch } from 'react-redux/es/exports';
-import {addCart} from '../redux/action'
+
 
 function ProductDetail() {
 
@@ -15,10 +13,6 @@ function ProductDetail() {
     const [product, setProduct] = useState([]);
     const [loading, setloading] = useState(false);
 
-    const dispatch = useDispatch();
-    const addProduct = (product)=>{
-        dispatch(addCart(product));
-    }
 
     useEffect(() => {
 
@@ -74,7 +68,7 @@ function ProductDetail() {
                     <p className="lead">
                         {product.description}
                     </p>
-                    <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)}>
+                    <button className="btn btn-outline-dark px-4 py-2">
                         Add to Cart
                     </button>
                     <Link to="/cart" className="btn btn-dark ms-2 px-3 py-2">

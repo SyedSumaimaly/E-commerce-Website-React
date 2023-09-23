@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
 import {
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
+import  CartContext from '../context/addtocart/Context';
 
 function CusNavbar() {
+
+    const [state, dispatch] = useContext(CartContext);
+
+    console.log(state);
+
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
             <div className="container-fluid">
