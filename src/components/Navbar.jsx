@@ -4,7 +4,7 @@ import './Navbar.css';
 import {
     Link
 } from "react-router-dom";
-import  CartContext from '../context/addtocart/Context';
+import  {CartContext} from '../context/addtocart/Context';
 
 function CusNavbar() {
 
