@@ -8,11 +8,8 @@ import  CartContext from '../context/addtocart/Context';
 
 function CusNavbar() {
 
-    const [state, dispatch] = useContext(CartContext);
-
-    console.log(state);
-
-
+const [state, dispatch] = useContext(CartContext)
+console.log(state.cart.length)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
             <div className="container-fluid">
@@ -44,7 +41,7 @@ function CusNavbar() {
                             <i className="fa fa-user-plus me-1"></i>Register
                         </Link>
                         <Link className="btn btn-outline-success ms-2" type="submit" to="/cart">
-                            <i className="fa fa-shopping-cart me-1"></i>Cart (0)
+                    <i className="fa fa-shopping-cart me-1"></i>Cart ({state.cart.length})
                         </Link>
                     </form>
                 </div>

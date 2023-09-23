@@ -5,17 +5,18 @@ import App from './App';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import { BrowserRouter } from 'react-router-dom'
-import ContextProvider from './context/addtocart/Context'
+import CartContextProvider from './context/addtocart/Context.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ContextProvider>
+
+  <CartContextProvider>
     <BrowserRouter>
       <React.StrictMode>
         <App />
       </React.StrictMode>
     </BrowserRouter>
-  </ContextProvider>
+  </CartContextProvider>
   ,
 );
 
