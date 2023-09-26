@@ -1,0 +1,16 @@
+.cartdiv{
+    box-shadow: 0px 0px 10px 10px rgb(227, 227, 227);
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: auto;
+}
+
+.cartdiv img{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.btn_cart{
+    width: 100%;
+}

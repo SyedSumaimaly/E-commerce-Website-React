@@ -1,7 +1,8 @@
 import React, { createContext, useReducer } from 'react'
+import { useEffect } from 'react';
 import { reducer } from './Reducer'
 
-// yaha msla hai ye arry undefined araha hai
+
 const initialData = {
     cart: []
 }

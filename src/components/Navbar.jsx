@@ -24,23 +24,11 @@ const {state, dispatch} = useContext(CartContext)
                         <li className="nav-item">
                             <Link className="nav-link" to="/products">Products</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact">Contact</Link>
-                        </li>
 
                     </ul>
                     <form className="d-flex" role="search">
-                        <Link className="btn btn-outline-success" type="submit" to="/login">
-                            <i className="fa fa-sign-in me-1"></i> Login
-                        </Link>
-                        <Link className="btn btn-outline-success ms-2" type="submit" to="/register">
-                            <i className="fa fa-user-plus me-1"></i>Register
-                        </Link>
-                        <Link className="btn btn-outline-success ms-2" type="submit" to="/cart">
-                    <i className="fa fa-shopping-cart me-1"></i>Cart ({state.cart.length})
+                        <Link className="btn btn-light ms-2" type="submit" to="/cart">
+                    <i className="fa fa-shopping-cart me-1"></i>Cart ({state.cart.length })
                         </Link>
                     </form>
                 </div>

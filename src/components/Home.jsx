@@ -10,7 +10,7 @@ function Home() {
                 <img src="/assets/banner3.jpg" className="card-img" alt="..." />
 
                 <div className="card-img-overlay ">
-                    <div className="container">
+                    <div className="container" data-aos="zoom-in-left"  data-aos-duration="1000">
                         <h5 className="card-title display-3 fw-bolder mb-0">NEW SEASON ARRIVALS</h5>
                         <p className="card-text lead fs-2">CHECK OUT ALL THE TRENDS</p>
                     </div>

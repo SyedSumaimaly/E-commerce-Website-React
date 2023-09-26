@@ -4,6 +4,7 @@ import Skeleton from 'react-loading-skeleton';
 import {
     Link
   } from "react-router-dom";
+  import './Product.css'
 
 function Products() {
 
@@ -57,7 +58,7 @@ function Products() {
     const ShowProducts = () => {
         return (
             <>
-                <div className="buttons d-flex justify-content-center mb-5 pb-5">
+                <div className="buttons d-flex justify-content-center mb-5 pb-5"  data-aos="zoom-out-up"  data-aos-duration="1000">
                     <button className="btn btn-outline-dark me-2" onClick={() => setFilter(data)}> All </button>
                     <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("men's clothing")}> Men's Clothing</button>
                     <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("women's clothing")}> Women's Clothing</button>
@@ -68,7 +69,7 @@ function Products() {
                     return (
                         <>
                             <div className="col-md-3">
-                                <div class="card">
+                                <div class="card pcards" data-aos="zoom-in-up"  data-aos-duration="1000">
                                     <img src={product.image} class="card-img-top" alt={product.title} height="250px" />
                                     <div class="card-body h-100 text-center">
                                         <h5 class="card-title">{product.title.substring(0, 12)}...</h5>
@@ -91,7 +92,7 @@ function Products() {
                 <div className="container my-5 py-5">
                     <div className="row">
                         <div className="col-12 mb-5"></div>
-                        <h1 className='display-6 fw-bolder text-center'>LATEST PRODUCTS</h1>
+                        <h1 className='display-6 fw-bolder text-center' data-aos="zoom-out-up"  data-aos-duration="1000">LATEST PRODUCTS</h1>
                         <hr />
                     </div>
                     <div className="row justify-content-center">
