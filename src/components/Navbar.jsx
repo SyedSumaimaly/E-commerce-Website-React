@@ -8,8 +8,7 @@ import  {CartContext} from '../context/addtocart/Context';
 
 function CusNavbar() {
 
-const [state, dispatch] = useContext(CartContext)
-console.log(state.cart.length)
+const {state, dispatch} = useContext(CartContext)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
             <div className="container-fluid">

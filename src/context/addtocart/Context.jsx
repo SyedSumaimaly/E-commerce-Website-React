@@ -1,11 +1,9 @@
 import React, { createContext, useReducer } from 'react'
 import { reducer } from './Reducer'
 
-
+// yaha msla hai ye arry undefined araha hai
 const initialData = {
-    cart: [
-        "sumaim"
-    ]
+    cart: []
 }
 
 export const CartContext = createContext("Initial Value");

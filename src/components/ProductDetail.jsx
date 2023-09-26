@@ -14,7 +14,7 @@ function ProductDetail() {
     const [product, setProduct] = useState([]);
     const [loading, setloading] = useState(false);
 
-    const [state, dispatch] = useContext(CartContext);
+    const {state, dispatch} = useContext(CartContext);
 
 
     useEffect(() => {
@@ -25,7 +25,6 @@ function ProductDetail() {
             setProduct(await response.json());
             setloading(false);
         }
-        console.log(product)
         getProduct()
     }, [])
 
@@ -49,14 +48,17 @@ function ProductDetail() {
     }
 
 
-    const handleCart = ()=>{
+    const handleCart = async()=>{
+        // yaha s dispatch ho raha hai
         console.log(product);
-        dispatch(
+        await dispatch(
             {
                 type: "ADD_TO_CART",
-                paylaod: product
+                payload: product 
             }
-        )
+            )
+
+        console.log(state);
     }
 
     const ShowProduct = () => {
